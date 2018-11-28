@@ -1,33 +1,16 @@
 import React from 'react';
-import { 
-  Button, 
-  Text, 
-  View, 
-  TextInput, 
-  List, 
-  StyleSheet, 
-  FlatList 
-} from 'react-native';
+import { Button, Text, View, TextInput, FlatList } from 'react-native';
 import { createStackNavigator, createBottomTabNavigator, createAppContainer } from 'react-navigation';
 
 class HomeScreen extends React.Component {
   render() {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <View style={styles.container}>
-        <FlatList
-          data={[
-            {key: 'Devin', name: 'jii'},
-            {key: 'Jackson', name: 'jii'},
-            {key: 'James', name: 'jii'},
-            {key: 'Joel', name: 'jii'},
-            {key: 'John', name: 'jii'},
-            {key: 'Jillian', name: 'jii'},
-          ]}
-          renderItem={({item}) => <Text style={styles.item}>{item.key}{item.name}</Text>}
-        />
-      </View>
         <Text>Home!</Text>
+        <Button
+          title="Go to AddPlant"
+          onPress={() => this.props.navigation.navigate('AddPlant')}
+        />
       </View>
     );
   }
@@ -63,9 +46,8 @@ class AddPlantScreen extends React.Component {
             onChangeText={plant => this.setState({ text: plant })}
             value={this.state.text}
           />
-        </View>
-        <View> 
-            <Button mode="contained" color="blue"
+          <Divider />
+          <Button mode="contained" color="blue"
           onPress={this.buttonPressed} title=" Add " />
         </View>
       </View>
@@ -82,18 +64,6 @@ class DetailsScreen extends React.Component {
     );
   }
 }
-
-const styles = StyleSheet.create({
-  container: {
-   flex: 1,
-   paddingTop: 22
-  },
-  item: {
-    padding: 10,
-    fontSize: 18,
-    height: 44,
-  },
-})
 
 const HomeStack = createStackNavigator({
   Home: { screen: HomeScreen },

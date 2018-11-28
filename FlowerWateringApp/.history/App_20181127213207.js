@@ -18,13 +18,15 @@ class HomeScreen extends React.Component {
         <FlatList
           data={[
             {key: 'Devin', name: 'jii'},
-            {key: 'Jackson', name: 'jii'},
-            {key: 'James', name: 'jii'},
-            {key: 'Joel', name: 'jii'},
-            {key: 'John', name: 'jii'},
-            {key: 'Jillian', name: 'jii'},
+            {key: 'Jackson'},
+            {key: 'James'},
+            {key: 'Joel'},
+            {key: 'John'},
+            {key: 'Jillian'},
+            {key: 'Jimmy'},
+            {key: 'Julie'},
           ]}
-          renderItem={({item}) => <Text style={styles.item}>{item.key}{item.name}</Text>}
+          renderItem={({item}) => <Text style={styles.item}>{item.key}</Text>}
         />
       </View>
         <Text>Home!</Text>
