@@ -9,7 +9,12 @@
   "dependencies": {
     "react": "16.6.1",
     "react-native": "0.57.5",
+    "react-native-elements": "^0.19.1",
     "react-native-gesture-handler": "^1.0.9",
+    "react-native-linear-gradient": "^2.5.2",
+    "react-native-local-mongodb": "^2.2.3",
+    "react-native-sqlite-storage": "^3.3.8",
+    "react-native-vector-icons": "^6.1.0",
     "react-navigation": "^3.0.0"
   },
   "devDependencies": {
